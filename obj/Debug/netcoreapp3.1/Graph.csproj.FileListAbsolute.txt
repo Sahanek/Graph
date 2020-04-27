@@ -1,0 +1,11 @@
+C:\Users\Student248985\Documents\Graph\bin\Debug\netcoreapp3.1\Graph.exe
+C:\Users\Student248985\Documents\Graph\bin\Debug\netcoreapp3.1\Graph.deps.json
+C:\Users\Student248985\Documents\Graph\bin\Debug\netcoreapp3.1\Graph.runtimeconfig.json
+C:\Users\Student248985\Documents\Graph\bin\Debug\netcoreapp3.1\Graph.runtimeconfig.dev.json
+C:\Users\Student248985\Documents\Graph\bin\Debug\netcoreapp3.1\Graph.dll
+C:\Users\Student248985\Documents\Graph\bin\Debug\netcoreapp3.1\Graph.pdb
+C:\Users\Student248985\Documents\Graph\obj\Debug\netcoreapp3.1\Graph.csprojAssemblyReference.cache
+C:\Users\Student248985\Documents\Graph\obj\Debug\netcoreapp3.1\Graph.AssemblyInfoInputs.cache
+C:\Users\Student248985\Documents\Graph\obj\Debug\netcoreapp3.1\Graph.AssemblyInfo.cs
+C:\Users\Student248985\Documents\Graph\obj\Debug\netcoreapp3.1\Graph.dll
+C:\Users\Student248985\Documents\Graph\obj\Debug\netcoreapp3.1\Graph.pdb
