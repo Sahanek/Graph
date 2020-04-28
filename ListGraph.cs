@@ -85,7 +85,7 @@ namespace Project
                 try{
                     string docPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                     
-                    Console.Write("Dokoncz sciezke pliku zawierajacego graf\n {0}\\",docPath);
+                    Console.Write("Dokoncz sciezke pliku zawierajacego graf\n {0}",docPath);
                     string path = Console.ReadLine();
 
                     using( StreamReader sr = new StreamReader(Path.Combine(docPath + path)))

@@ -29,7 +29,7 @@ namespace Project
         public abstract void FillGraph( int maxWeight = maxW );
         public abstract void PrintGraph();
         public abstract int ReadFromFile();
-        public int Source(int i) {return i;}
+
 
         public abstract int[] Edge(int source, int which);
 

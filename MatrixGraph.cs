@@ -119,10 +119,9 @@ namespace Project
                 Matrix[i] = new int[aVertices];
                 for (int x = 0; x < aVertices; x++)
                 {   
-                    //if(i!=x)
                 
                     Matrix[i][x]=int.MaxValue - 10000;
-                  //  else Matrix[i][x] = 0;
+                  
                 }
             }
         }
@@ -158,5 +157,4 @@ namespace Project
             //PrintGraph();
         }
     }
-
 }

@@ -138,5 +138,64 @@ namespace Project
                 PrintSolution(pathToVertice, distance, vertices, source);
         
         }
+
+        public static void FindTheShortestPat(ListGraph graph, int source, bool printSolution = false)
+        {
+            int vertices = graph.NumVertices;
+            int edges = graph.NumEdges;
+            int[] distance = new int [vertices];
+            string[] pathToVertice = new string [vertices];
+            int destination, weight;
+            EdgeNode current;
+            for (int i = 0; i < vertices; i++) // inicjowanie wszystkich odległości jako max
+                distance[i] = int.MaxValue - 10000;
+ 
+                 distance[source] = 0; //źródla na 0
+ 
+            for (int i = 1; i <= vertices - 1; ++i) // Najkrótsza droga z żródła może mieć maksymalnie V-1 krawędzi.
+            {
+                for (int j = 0; j < vertices; ++j) 
+                {
+                    current = graph.ListVertices[j].Head;
+                    while(current!=null)  
+                    { 
+                        destination = current.Destination;
+                        weight = current.Weight; 
+                        if (distance[j] != int.MaxValue - 10000 && distance[j] + weight < distance[destination])
+                        {
+                            distance[destination] = distance[j] + weight; 
+                             if (printSolution)
+                                pathToVertice[weight] = pathToVertice[j] + j.ToString() + "->";
+                            
+                        }
+                        current = current.Next;
+                    }
+                    
+                }
+            }
+
+            //Sprawdzenie czy nie wystapił cykl ujemny
+            
+            for (int j = 0; j < vertices; ++j) 
+            {
+                for (int k = 0; k < vertices; k++)
+                {
+                    /*
+                   edge[0] = Source
+                    edge[1] = Destination
+                    edge[2] = Weight
+                    */ 
+                    int[] edge = graph.Edge(j,k);
+                    if(edge == null ) break; //skończyły się krawędzie
+    
+                    if (distance[edge[0]] != int.MaxValue - 10000 && distance[edge[0]] + edge[2] < distance[edge[1]])
+                        Console.WriteLine("Graph contains negative weight cycle.");
+                }
+            }
+
+            if(printSolution)
+                PrintSolution(pathToVertice, distance, vertices, source);
+        
+        }
     }
 }
